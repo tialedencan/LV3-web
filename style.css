@@ -1,0 +1,222 @@
+/* CSS variables */
+:root {
+    --primary-color: #463239;
+    --secondary-color: #6c757d;
+    --font-size-base: 16px;
+    --font-family-base: Arial, sans-serif;
+    --background-color: #FAB3A9;
+    --dark-pink: #ED6B86;
+    --green: #7FB285;
+}
+
+/* Global styles */
+body {
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-base);
+    color: #333;
+    margin: 1em;
+    padding: 0;
+    background-color: #FAB3A9;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header styles */
+.cart-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cart-badge {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+}
+
+/* Items grid styles */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1em;
+    margin: 1em;
+    
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-pink);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 1em;
+    margin: 1em 2em;
+    box-shadow: inset 5em 1em var(--green);
+}
+
+.item h2 {
+    margin-top: 0.5em;
+}
+
+.item p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show-modal {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    max-width: 600px;
+}
+
+.close {
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.cart-items li span {
+    margin-left: 0.5em;
+}
+
+.cart-total {
+    font-weight: bold;
+}
+
+.buy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.decrement-btn {
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: var(--dark-pink);
+    margin-top:0.5em;
+    font-size: 1em;
+}
+button:disabled {
+    background-color: grey; /* Change this to any color you prefer */
+    cursor: not-allowed; /* Optional: Changes the cursor to indicate the button is not clickable */
+}
+
+.title-div {
+    margin: 2em;
+    display:grid;
+    column-gap: 1em;
+    grid-template-columns: 1fr 0.9fr 0.8fr;
+    
+}
+.title-div h1 {
+    align-self:center;
+    margin-bottom: 0;
+    color:var(--primary-color);
+}
+
+#searchInput {
+    font-size: 1.1em;
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.cart-container{
+    justify-self: end;
+    align-self:center;
+}
+
+.modal-content h1 {
+    color:var(--green);
+}
+
+.cart-item {
+    display:grid;
+    column-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+} 
+
+.total-p {
+    font-size: 1.1em;
+    padding-left: 10px;
+}
+.buy-btn , .modal-content h1, .modal-content #message {
+    margin-left: 20px;
+}
+
+.modal-content p, .modal-content .cart-items {
+    margin:1em;
+}
